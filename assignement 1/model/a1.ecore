@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="a1" nsURI="a1" nsPrefix="a1">
+  <eClassifiers xsi:type="ecore:EClass" name="Team">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="City_Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Stadium" lowerBound="1"
+        eType="#//Stadium"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Conference" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Players" lowerBound="5"
+        upperBound="-1" eType="#//Player"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Coach" lowerBound="1" eType="#//Coach"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Number_of_victories" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Number_of_Loses" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Rank" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Stats" lowerBound="1" eType="#//Stats"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Person" abstract="true" eSuperTypes="#//Coach #//Player">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Surname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Birthdate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Age" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Actual_Team" lowerBound="1"
+        eType="#//Team"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Past_Team" upperBound="-1"
+        eType="#//Team"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Player">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Position" eType="#//Position"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Number" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Height" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Weight" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Stats" eType="#//Stats"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Coach">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Experience" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Match">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Date" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Hour" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Stadium" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Team" lowerBound="2" upperBound="2"
+        eType="#//Team"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Winner" lowerBound="1"
+        eType="#//Team"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Looser" lowerBound="1"
+        eType="#//Team"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Stats">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Points_Per_Game" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Rebounds_Per_Game" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Assists_Per_Game" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Blocks_Per_Game" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Steals_Per_Game" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Filed_Goal_Percentage"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Three_Pointers_Made" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Three_Point_Percentage"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Championship">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Season_Years" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Team" lowerBound="6" upperBound="30"
+        eType="#//Team"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Stadium">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Capacity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Address" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Team" lowerBound="1" eType="#//Team"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Position">
+    <eLiterals name="Guard"/>
+    <eLiterals name="Forward" value="1"/>
+    <eLiterals name="Center" value="2"/>
+    <eLiterals name="Shooting_Guard" value="3"/>
+    <eLiterals name="Power_Forward" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Date"/>
+</ecore:EPackage>
