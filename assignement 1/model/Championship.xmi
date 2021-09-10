@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a1:Championship
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:a1="a1"
+    xsi:schemaLocation="a1 a1.ecore"
+    Season_Years="2020">
+  <Team Name="1">
+    <Stadium
+        Team="//@Team.0"/>
+    <Players
+        Actual_Team="//@Team.0"/>
+    <Players
+        Actual_Team="//@Team.0"
+        Position="Forward"/>
+    <Players
+        Actual_Team="//@Team.0"
+        Position="Center"/>
+    <Players
+        Actual_Team="//@Team.0"
+        Position="Shooting_Guard"/>
+    <Players
+        Actual_Team="//@Team.0"
+        Position="Power_Forward"/>
+    <Coach Actual_Team="//@Team.0"/>
+    <Stats/>
+  </Team>
+  <Team Name="2">
+    <Stadium/>
+    <Players/>
+    <Players/>
+    <Players/>
+    <Players/>
+    <Players/>
+    <Coach/>
+    <Stats/>
+  </Team>
+  <Team Name="3">
+    <Stadium/>
+    <Players/>
+    <Players/>
+    <Players/>
+    <Players/>
+    <Players/>
+    <Coach/>
+    <Stats/>
+  </Team>
+  <Team Name="4">
+    <Stadium/>
+    <Players/>
+    <Players/>
+    <Players/>
+    <Players/>
+    <Players/>
+    <Coach/>
+    <Stats/>
+  </Team>
+</a1:Championship>
