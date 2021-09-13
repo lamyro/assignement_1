@@ -6,7 +6,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="City_Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Stadium" lowerBound="1"
         eType="#//Stadium" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Conference" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Conference" eType="#//Conference"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Players" lowerBound="5"
         upperBound="-1" eType="#//Player" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Coach" lowerBound="1" eType="#//Coach"
@@ -82,4 +82,8 @@
     <eLiterals name="Power_Forward" value="4"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="LocalDate" instanceClassName="java.time.LocalDate"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="Conference">
+    <eLiterals name="West"/>
+    <eLiterals name="East" value="1"/>
+  </eClassifiers>
 </ecore:EPackage>

@@ -6,8 +6,13 @@
     xmlns:a1="a1"
     xsi:schemaLocation="a1 a1.ecore"
     Season_Years="2020">
-  <Team Name="1">
+  <Team Name="Milwaukee Bucks"
+      City_Name="Milwaukee "
+      Conference="East">
     <Stadium
+        Name="Fiserv Forum"
+        Capacity="17341"
+        Address="1111 Vel R. Phillips Ave, Milwaukee, WI 53203, USA"
         Team="//@Team.0"/>
     <Players
         Actual_Team="//@Team.0"/>
@@ -23,37 +28,70 @@
     <Players
         Actual_Team="//@Team.0"
         Position="Power_Forward"/>
-    <Coach Actual_Team="//@Team.0"/>
+    <Coach Name="Mike "
+        Surname="Budenholzer"
+        Age="52"
+        Actual_Team="//@Team.0"
+        Experience="8"/>
     <Stats/>
   </Team>
-  <Team Name="2">
-    <Stadium/>
+  <Team Name="Golden State Warriors"
+      City_Name="San Francisco">
+    <Stadium
+        Name="Chase Center"
+        Capacity="18064"
+        Address="1 Warriors Way, San Francisco, CA 94158, USA"
+        Team="//@Team.1"/>
     <Players/>
     <Players/>
     <Players/>
     <Players/>
     <Players/>
-    <Coach/>
+    <Coach Name="Stephen "
+        Surname="Kerr"
+        Age="55"
+        Actual_Team="//@Team.1"
+        Experience="7"/>
     <Stats/>
   </Team>
-  <Team Name="3">
-    <Stadium/>
+  <Team Name="Brooklyn Nets"
+      City_Name="Brooklyn "
+      Conference="East">
+    <Stadium
+        Name="Barclays Center"
+        Capacity="19000"
+        Address="620 Atlantic Ave, Brooklyn, NY 11217, USA"
+        Team="//@Team.2"/>
     <Players/>
     <Players/>
     <Players/>
     <Players/>
     <Players/>
-    <Coach/>
+    <Coach Name="Steve"
+        Surname="Nash"
+        Age="47"
+        Actual_Team="//@Team.2"
+        Past_Team="//@Team.3"
+        Experience="1"/>
     <Stats/>
   </Team>
-  <Team Name="4">
-    <Stadium/>
+  <Team Name="Los Angeles Lakers"
+      City_Name="Los Angeles ">
+    <Stadium
+        Name="Staples Center"
+        Capacity="20000"
+        Address="1111 S Figueroa St, Los Angeles, CA 90015, USA"
+        Team="//@Team.3"/>
     <Players/>
     <Players/>
     <Players/>
     <Players/>
     <Players/>
-    <Coach/>
+    <Coach Name="Frank"
+        Surname="Vogel"
+        Age="48"
+        Actual_Team="//@Team.3"
+        Experience="2"/>
     <Stats/>
   </Team>
 </a1:Championship>
