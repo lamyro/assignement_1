@@ -46,8 +46,7 @@
         eType="#//Team"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Winner" lowerBound="1"
         eType="#//Team"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Looser" lowerBound="1"
-        eType="#//Team"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Loser" lowerBound="1" eType="#//Team"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Stats">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Points_Per_Game" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
@@ -57,7 +56,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Steals_Per_Game" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Filed_Goal_Percentage"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Three_Pointers_Made" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Three_Pointers_Made" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Three_Point_Percentage"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
   </eClassifiers>
