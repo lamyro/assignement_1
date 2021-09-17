@@ -290,20 +290,20 @@
       Stadium="Chase Center Stadium"
       Team="//@Team.1 //@Team.3"
       Winner="//@Team.3"
-      Looser="//@Team.1"/>
+      Loser="//@Team.1"/>
   <Matchs Hour="20"
       Stadium="Fiserv Forum"
       Team="//@Team.0 //@Team.2"
       Winner="//@Team.0"
-      Looser="//@Team.2"/>
+      Loser="//@Team.2"/>
   <Matchs Hour="20"
       Stadium="Staples Center"
       Team="//@Team.3 //@Team.0"
       Winner="//@Team.3"
-      Looser="//@Team.3"/>
+      Loser="//@Team.3"/>
   <Matchs Hour="20"
       Stadium="Chase Center"
       Team="//@Team.1 //@Team.2"
       Winner="//@Team.2"
-      Looser="//@Team.1"/>
+      Loser="//@Team.1"/>
 </a1:Championship>
