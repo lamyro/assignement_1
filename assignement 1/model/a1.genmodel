@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/assignement_1/src" modelPluginID="assignement_1"
+    modelName="A1" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>a1.ecore</foreignModel>
+  <genPackages prefix="A1" disposableProviderFactory="true" ecorePackage="a1.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="a1.ecore#//Position">
+      <genEnumLiterals ecoreEnumLiteral="a1.ecore#//Position/Guard"/>
+      <genEnumLiterals ecoreEnumLiteral="a1.ecore#//Position/Forward"/>
+      <genEnumLiterals ecoreEnumLiteral="a1.ecore#//Position/Center"/>
+      <genEnumLiterals ecoreEnumLiteral="a1.ecore#//Position/Shooting_Guard"/>
+      <genEnumLiterals ecoreEnumLiteral="a1.ecore#//Position/Power_Forward"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="a1.ecore#//Conference">
+      <genEnumLiterals ecoreEnumLiteral="a1.ecore#//Conference/West"/>
+      <genEnumLiterals ecoreEnumLiteral="a1.ecore#//Conference/East"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="a1.ecore#//LocalDate"/>
+    <genClasses ecoreClass="a1.ecore#//Team">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute a1.ecore#//Team/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute a1.ecore#//Team/City_Name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference a1.ecore#//Team/Stadium"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute a1.ecore#//Team/Conference"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference a1.ecore#//Team/Players"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference a1.ecore#//Team/Coach"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute a1.ecore#//Team/Number_of_victories"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute a1.ecore#//Team/Number_of_Loses"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute a1.ecore#//Team/Rank"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference a1.ecore#//Team/Stats"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="a1.ecore#//Person">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute a1.ecore#//Person/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute a1.ecore#//Person/Surname"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute a1.ecore#//Person/Birthdate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute a1.ecore#//Person/Age"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference a1.ecore#//Person/Actual_Team"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference a1.ecore#//Person/Past_Team"/>
+    </genClasses>
+    <genClasses ecoreClass="a1.ecore#//Player">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute a1.ecore#//Player/Position"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute a1.ecore#//Player/Number"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute a1.ecore#//Player/Height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute a1.ecore#//Player/Weight"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference a1.ecore#//Player/Stats"/>
+    </genClasses>
+    <genClasses ecoreClass="a1.ecore#//Coach">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute a1.ecore#//Coach/Experience"/>
+    </genClasses>
+    <genClasses ecoreClass="a1.ecore#//Match">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute a1.ecore#//Match/Date"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute a1.ecore#//Match/Hour"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute a1.ecore#//Match/Stadium"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference a1.ecore#//Match/Team"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference a1.ecore#//Match/Winner"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference a1.ecore#//Match/Looser"/>
+    </genClasses>
+    <genClasses ecoreClass="a1.ecore#//Stats">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute a1.ecore#//Stats/Points_Per_Game"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute a1.ecore#//Stats/Rebounds_Per_Game"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute a1.ecore#//Stats/Assists_Per_Game"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute a1.ecore#//Stats/Blocks_Per_Game"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute a1.ecore#//Stats/Steals_Per_Game"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute a1.ecore#//Stats/Filed_Goal_Percentage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute a1.ecore#//Stats/Three_Pointers_Made"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute a1.ecore#//Stats/Three_Point_Percentage"/>
+    </genClasses>
+    <genClasses ecoreClass="a1.ecore#//Championship">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute a1.ecore#//Championship/Season_Years"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference a1.ecore#//Championship/Team"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference a1.ecore#//Championship/Matchs"/>
+    </genClasses>
+    <genClasses ecoreClass="a1.ecore#//Stadium">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute a1.ecore#//Stadium/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute a1.ecore#//Stadium/Capacity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute a1.ecore#//Stadium/Address"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference a1.ecore#//Stadium/Team"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
